@@ -20,8 +20,10 @@ def scrape():
     quotes = soup.find_all('li',class_='slide')
     news_title = quotes[0].find('div',class_='content_title').text
     news_p = quotes[0].find('div',class_='article_teaser_body').text
+
     listings['news_title'] = news_title
     listings['news_p'] = news_p
+  
     # print(news_title)
     # print(news_p)
     browser.quit()
